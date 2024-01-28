@@ -77,6 +77,52 @@ class Program
 
                     case 4:
                         Console.WriteLine("You chose Option 4.");
+                        // Get string input from the user
+                        Console.Write("Enter a string: ");
+                        string inputString = Console.ReadLine();
+
+                        // Generate a random number between 1 and 10
+                        int randomNumberAction = random.Next(1, 11);
+
+                        // Perform a random action based on the random number
+                        switch (randomNumberAction)
+                        {
+                            case 1:
+                                Console.WriteLine($"Length of the string: {inputString.Length}");
+                                break;
+                            case 2:
+                                Console.WriteLine($"Uppercase: {inputString.ToUpper()}");
+                                break;
+                            case 3:
+                                Console.WriteLine($"Lowercase: {inputString.ToLower()}");
+                                break;
+                            case 4:
+                                Console.WriteLine($"Reversed string: {ReverseString(inputString)}");
+                                break;
+                            case 5:
+                                int startIndex = random.Next(inputString.Length);
+                                int length = random.Next(inputString.Length - startIndex);
+                                Console.WriteLine($"Substring: {inputString.Substring(startIndex, length)}");
+                                break;
+                            case 6:
+                                Console.WriteLine($"Every other letter uppercase: {MakeEveryOtherLetterUppercase(inputString)}");
+                                break;
+                            case 7:
+                                Console.WriteLine($"Convert letters to numbers using ASCII code: {ConvertLettersToNumbers(inputString)}");
+                                break;
+                            case 8:
+                                Console.WriteLine($"Print the string twice: {inputString}{inputString}");
+                                break;
+                            case 9:
+                                Console.WriteLine($"Print the string in alphabetical order: {string.Concat(inputString.OrderBy(c => c))}");
+                                break;
+                            case 10:
+                                Console.WriteLine($"Print the string twice with first iteration reversed: {ReverseString(inputString)}{inputString}");
+                                break;
+                            default:
+                                Console.WriteLine($"No action performed.");
+                                break;
+                        }
                         break;
 
                     default:
@@ -96,5 +142,42 @@ class Program
             if (continueChoice != "Y")
                 break;
         }
+    }
+
+    // Method to reverse a string
+    static string ReverseString(string input)
+    {
+        char[] charArray = input.ToCharArray();
+        Array.Reverse(charArray);
+        return new string(charArray);
+    }
+
+    // Method to make every other letter uppercase
+    static string MakeEveryOtherLetterUppercase(string input)
+    {
+        char[] charArray = input.ToCharArray();
+        for (int i = 1; i < charArray.Length; i += 2)
+        {
+            charArray[i] = char.ToUpper(charArray[i]);
+        }
+        return new string(charArray);
+    }
+
+    // Method to convert letters to numbers using ASCII code
+    static string ConvertLettersToNumbers(string input)
+    {
+        string result = "";
+        foreach (char c in input)
+        {
+            if (char.IsLetter(c))
+            {
+                result += (int)c + " ";
+            }
+            else
+            {
+                result += c;
+            }
+        }
+        return result;
     }
 }
