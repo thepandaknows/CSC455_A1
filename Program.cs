@@ -23,6 +23,9 @@ namespace Assignment1
                         p.Option1();
                         break;
 
+                    case 2:
+                        p.Option2();
+                        break;
                     case 0:
                         break;
                 } 
@@ -43,6 +46,12 @@ namespace Assignment1
             Random r = new Random();
             int x = r.Next(9);
             Console.WriteLine($"Random number: {x}");
+        }
+
+        void Option2()
+        {
+            DateTime date = DateTime.Today;
+            Console.WriteLine(date.ToShortDateString());
         }
         
     }
