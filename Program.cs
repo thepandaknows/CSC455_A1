@@ -1,11 +1,13 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 class Program
 {
-    public Program()
-    {
-    }
-
     static void Main(string[] args)
     {
+        Random random = new Random(); // Creating a Random object inside Main
+
         while (true)
         {
             // Menu of features for steps 2-5
@@ -27,9 +29,6 @@ class Program
                     case 1:
                         Console.WriteLine("You chose Option 1.");
                         // Creating a random number generator
-                        Random random = new Random();
-
-                        // Generating a random positive integer between 1 and 10 (inclusive)
                         int randomNumber = random.Next(1, 11);
 
                         // Outputting the random number to the console
@@ -50,23 +49,44 @@ class Program
 
                     case 3:
                         Console.WriteLine("You chose Option 3.");
+                        // Creating a list of dinosaur names
+                        List<string> dinosaurNames = new List<string>
+                        {
+                            "Tyrannosaurus",
+                            "Triceratops",
+                            "Stegosaurus",
+                            "Velociraptor",
+                            "Brachiosaurus",
+                            "Allosaurus",
+                            "Ankylosaurus",
+                            "Pterodactyl",
+                            "Diplodocus",
+                            "Spinosaurus"
+                        };
+
+                        // Ordering the list alphabetically using LINQ
+                        dinosaurNames = dinosaurNames.OrderBy(name => name).ToList();
+
+                        // Generating a random index to select a dinosaur name
+                        int randomIndex = random.Next(0, dinosaurNames.Count);
+
+                        // Outputting a random dinosaur name from the list
+                        string randomDinosaurName = dinosaurNames[randomIndex];
+                        Console.WriteLine("Random dinosaur name: " + randomDinosaurName);
                         break;
-
-
 
                     case 4:
                         Console.WriteLine("You chose Option 4.");
                         break;
 
-                        // If user inputs any number not 1-4
                     default:
                         Console.WriteLine("Invalid choice. Please enter a number between 1 and 4.");
                         break;
                 }
             }
             else
-            // If user inputs anything else
             {
+                // If user inputs anything else
                 Console.WriteLine("Invalid input. Please enter a valid number.");
             }
 
