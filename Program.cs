@@ -30,7 +30,13 @@ namespace Assignment1
                         string s = p.Option3();
                         Console.WriteLine($"Random dinosaur from above: {s}");
                         break;
+                    case 4:
+                        string t = p.Option4();
+                        Console.WriteLine(t);
+                        break;
                     case 0:             // End while loop
+                        break;
+                    default:
                         break;
                 } 
                 choice = p.GetChoice();
@@ -72,6 +78,42 @@ namespace Assignment1
                 Console.WriteLine(name);
             int x = ranName.Next(9);
             s = list[x];
+            return s;
+        }
+
+        string Option4()
+        {
+            string s = "Never gonna give you up.";
+            //string s = "HELLO"; //Test for case 1.
+            int randomFunction = 0;
+            Random r = new Random();
+            //randomFunction = r.Next(9);
+            randomFunction = 4;
+            switch (randomFunction)
+            {
+                case 0:
+                    s = s.ToUpper(); //Capitlize all the letters in the string.
+                    break;
+                case 1:
+                    s = s.ToLower(); //Make all the letters in the string to lowercase.
+                    break;
+                case 2:
+                    s = s.Replace("Never", "Always");
+                    break;
+                case 3:
+                    int x = s.Length;
+                    s = x.ToString();
+                    break;
+                case 4:
+                    string temp = "";
+                    char[] tempArray= s.ToCharArray();  //Convert string to array.
+                    for (int i = s.Length-1; i >= 0; i--)  //For loop to reverse the string.
+                    {
+                        temp += tempArray[i];
+                    }
+                    s = temp;  // Assign the reversed string to s.
+                    break;
+            }
             return s;
         }
     }
