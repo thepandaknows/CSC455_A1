@@ -27,7 +27,8 @@ namespace Assignment1
                         break;
 
                     case 2:
-                        p.Option2();
+                        string date = p.Option2();
+                        Console.WriteLine(date);
                         break;
                     case 3:
                         string s = p.Option3();
@@ -63,10 +64,11 @@ namespace Assignment1
             return x;
         }
 
-        public void Option2()
+        public string Option2()
         {
             DateTime date = DateTime.Today; //Create a DateTime object and assign it today's date
-            Console.WriteLine(date.ToShortDateString());  // Print it in the format DD/MM/YYYY
+            string x = date.ToShortDateString(); // Convert the date into a string
+            return x;  
         }
 
         public string Option3 ()
