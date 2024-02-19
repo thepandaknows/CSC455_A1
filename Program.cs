@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment1
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -21,7 +21,9 @@ namespace Assignment1
                 switch (choice)
                 {
                     case 1:
-                        p.Option1();
+                        int x = 0;
+                         x = p.Option1();
+                        Console.WriteLine($"Random number: {x}");
                         break;
 
                     case 2:
@@ -45,7 +47,7 @@ namespace Assignment1
             }
         }
 
-        int GetChoice()
+          int GetChoice()
         {
             
             int x;
@@ -54,11 +56,11 @@ namespace Assignment1
             return x;
         }
 
-         public void Option1()
+         public int Option1()
         {
             Random r = new Random();
             int x = r.Next(1,10);  //Generate the random number
-            Console.WriteLine($"Random number: {x}");
+            return x;
         }
 
         public void Option2()
