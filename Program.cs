@@ -54,20 +54,20 @@ namespace Assignment1
             return x;
         }
 
-         void Option1()
+         public void Option1()
         {
             Random r = new Random();
             int x = r.Next(1,10);  //Generate the random number
             Console.WriteLine($"Random number: {x}");
         }
 
-        void Option2()
+        public void Option2()
         {
             DateTime date = DateTime.Today; //Create a DateTime object and assign it today's date
             Console.WriteLine(date.ToShortDateString());  // Print it in the format DD/MM/YYYY
         }
-        
-        string Option3 ()
+
+        public string Option3 ()
         {
             string s = "";
             Random ranName = new Random();
@@ -84,7 +84,7 @@ namespace Assignment1
             return s;
         }
 
-        string Option4()
+        public string Option4()
         {
             string s = "Never gonna give you up.";
             //string s = "HELLO"; //Test for case 1.
