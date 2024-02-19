@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment1
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -21,7 +21,9 @@ namespace Assignment1
                 switch (choice)
                 {
                     case 1:
-                        p.Option1();
+                        int x = 0;
+                         x = p.Option1();
+                        Console.WriteLine($"Random number: {x}");
                         break;
 
                     case 2:
@@ -45,7 +47,7 @@ namespace Assignment1
             }
         }
 
-        int GetChoice()
+          int GetChoice()
         {
             
             int x;
@@ -54,20 +56,20 @@ namespace Assignment1
             return x;
         }
 
-         void Option1()
+         public int Option1()
         {
             Random r = new Random();
             int x = r.Next(1,10);  //Generate the random number
-            Console.WriteLine($"Random number: {x}");
+            return x;
         }
 
-        void Option2()
+        public void Option2()
         {
             DateTime date = DateTime.Today; //Create a DateTime object and assign it today's date
             Console.WriteLine(date.ToShortDateString());  // Print it in the format DD/MM/YYYY
         }
-        
-        string Option3 ()
+
+        public string Option3 ()
         {
             string s = "";
             Random ranName = new Random();
@@ -84,7 +86,7 @@ namespace Assignment1
             return s;
         }
 
-        string Option4()
+        public string Option4()
         {
             string s = "Never gonna give you up.";
             //string s = "HELLO"; //Test for case 1.
