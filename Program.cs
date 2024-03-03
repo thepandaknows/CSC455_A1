@@ -18,11 +18,13 @@ class Program
             Console.WriteLine("4) Input a string, then perform a random action on that string");
             Console.WriteLine("Enter your choice (1-4): ");
 
-            // Accepting user input
+            
             string userInput = Console.ReadLine();
+
+            //Validate userInput is an integer.
             int.TryParse(userInput, out int choice);
 
-            // Validating and processing user input
+            // Validate userInput is between 1 and 4
             while (choice == 0 || choice <1 || choice >4)
             {
                 Console.WriteLine("Invalid choice. Please enter a number between 1 and 4.");
@@ -30,7 +32,7 @@ class Program
                 int.TryParse(userInput, out choice);
             }
 
-            
+            // Process the user's request
                 switch (choice)
                 {
                     case 1:
