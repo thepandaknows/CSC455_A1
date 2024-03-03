@@ -20,10 +20,17 @@ class Program
 
             // Accepting user input
             string userInput = Console.ReadLine();
+            int.TryParse(userInput, out int choice);
 
             // Validating and processing user input
-            if (int.TryParse(userInput, out int choice))
+            while (choice == 0 || choice <1 || choice >4)
             {
+                Console.WriteLine("Invalid choice. Please enter a number between 1 and 4.");
+                userInput = Console.ReadLine();
+                int.TryParse(userInput, out choice);
+            }
+
+            
                 switch (choice)
                 {
                     case 1:
@@ -124,23 +131,17 @@ class Program
                                 break;
                         }
                         break;
-
-                    default:
-                        Console.WriteLine("Invalid choice. Please enter a number between 1 and 4.");
-                        break;
+                    
                 }
-            }
-            else
-            {
-                // If user inputs anything else
-                Console.WriteLine("Invalid input. Please enter a valid number.");
-            }
+            
+            
 
             // Asking if the user wants to continue or not
             Console.WriteLine("Do you want to continue? (Y/N)");
             string continueChoice = Console.ReadLine().Trim().ToUpper();
             if (continueChoice != "Y")
                 break;
+            
         }
     }
 
