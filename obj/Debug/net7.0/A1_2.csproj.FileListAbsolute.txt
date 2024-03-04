@@ -1,0 +1,15 @@
+C:\Users\Dakot\source\repos\CSC455_A1\bin\Debug\net7.0\A1_2.exe
+C:\Users\Dakot\source\repos\CSC455_A1\bin\Debug\net7.0\A1_2.deps.json
+C:\Users\Dakot\source\repos\CSC455_A1\bin\Debug\net7.0\A1_2.runtimeconfig.json
+C:\Users\Dakot\source\repos\CSC455_A1\bin\Debug\net7.0\A1_2.dll
+C:\Users\Dakot\source\repos\CSC455_A1\bin\Debug\net7.0\A1_2.pdb
+C:\Users\Dakot\source\repos\CSC455_A1\obj\Debug\net7.0\A1_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dakot\source\repos\CSC455_A1\obj\Debug\net7.0\A1_2.AssemblyInfoInputs.cache
+C:\Users\Dakot\source\repos\CSC455_A1\obj\Debug\net7.0\A1_2.AssemblyInfo.cs
+C:\Users\Dakot\source\repos\CSC455_A1\obj\Debug\net7.0\A1_2.csproj.CoreCompileInputs.cache
+C:\Users\Dakot\source\repos\CSC455_A1\obj\Debug\net7.0\A1_2.sourcelink.json
+C:\Users\Dakot\source\repos\CSC455_A1\obj\Debug\net7.0\A1_2.dll
+C:\Users\Dakot\source\repos\CSC455_A1\obj\Debug\net7.0\refint\A1_2.dll
+C:\Users\Dakot\source\repos\CSC455_A1\obj\Debug\net7.0\A1_2.pdb
+C:\Users\Dakot\source\repos\CSC455_A1\obj\Debug\net7.0\A1_2.genruntimeconfig.cache
+C:\Users\Dakot\source\repos\CSC455_A1\obj\Debug\net7.0\ref\A1_2.dll
