@@ -24,7 +24,7 @@ namespace Assignment1
                         int x = 0;
                          x = p.Option1();
                         Console.WriteLine($"Random number: {x}");
-                        //break;
+                        break;
 
                     case 2:
                         string date = p.Option2();
