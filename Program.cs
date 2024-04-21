@@ -16,7 +16,7 @@ class Program
             Console.WriteLine("2) Show today's date");
             Console.WriteLine("3) Output a random dinosaur name");
             Console.WriteLine("4) Input a string, then perform a random action on that string");
-            Console.WriteLine("Enter your choice (1-4): ");
+            Console.WriteLine("Enter your choice (1-4): ")
 
             
             string userInput = Console.ReadLine();
